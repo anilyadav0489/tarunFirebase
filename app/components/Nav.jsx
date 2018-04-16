@@ -13,7 +13,7 @@ class Nav extends React.Component{
       <div className="top-bar">
         <div className="top-bar-left">
           <ul className="menu ">
-            <li className="menu-text">Pick The Best App</li>
+            <li className="menu-text">SOW Maintenance</li>
             <li>
               <Link to="/" >Home</Link>
             </li>

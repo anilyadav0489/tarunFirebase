@@ -21,7 +21,7 @@ class Filters extends React.Component {
       <div>
         <p> </p>
         <div className="row">
-          <div className="column small center medium-4 large-4">
+          <div className="column small-10 center medium-4 large-4">
             Roll No:
             <input ref="rollNumber" type="input" placeholder="Roll Number"></input>
           </div>

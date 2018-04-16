@@ -17,20 +17,16 @@ class About extends React.Component{
         </div>
         <div className="row">
           <div className="column small-centered medium-10 large-12">
-              This is an intelligent game built on React. Here, user plays against computer to grab islands
-              with the maximum area. The only rule is, selection at any point during the game play, could be made
-              from either of available ends. One who grabs more area will win the game.
+              This app is created for maintaining SOW records for FedEx Projects in Syntel.
+              Users can add details for the new SOW and export the details for all the SOW(s) in MS excel format.
             <div className="margin">
               <ul>
                 <li>
-                  this.props.storeState.gameState
-                </li>
-                <li>
-                  <Link to="/">Resume Play</Link>
+                  This app is created by Anil Yadav
                 </li>
                 <li>
                   <a href="https://facebook.github.io/react">React JS </a>
-                  - have been used to implement this game.
+                  - have been used to implement this application.
                 </li>
 
               </ul>
