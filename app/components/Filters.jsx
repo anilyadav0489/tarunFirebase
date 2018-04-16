@@ -2,17 +2,24 @@ import React from 'react';
 import firebase, {firebaseRef} from 'initDB';
 
 class Filters extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
   saveStudent(e){
     e.preventDefault();
-    var student = {rollno:1, name:'A', subject:'English'};
+    const rollno = this.refs.rollNumber.value;
+    const name = this.refs.name.value;
+    const subject = this.refs.subject.value;
+    var student = {rollno, name, subject};
     firebaseRef.child('students').push(student);
-
-    alert('hi');
+    this.props.onUpdateTable();
+    //alert('hi');
   }
   render() {
     return (
       <div>
-        <p>Filters</p>
+        <p> </p>
         <div className="row">
           <div className="column small center medium-4 large-4">
             Roll No:
@@ -29,7 +36,7 @@ class Filters extends React.Component {
         </div>
         <div className = "row buttons">
           <div className="column small center medium-4 large-4">
-            <input type="button" value="Add" className="button primary expanded" onClick={this.saveStudent}></input>
+            <input type="button" value="Add" className="button primary expanded" onClick={this.saveStudent.bind(this)}></input>
           </div>
           <div className="column small center medium-4 large-4">
             <input type="button" value="Clear all fields" className="button primary expanded"></input>

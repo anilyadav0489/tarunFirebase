@@ -3,19 +3,26 @@ var React = require('react');
 class DataTable extends React.Component {
   constructor(props){
     super(props);
+    this.state = this.props;
   }
   render (){
-    var students = [
+    console.log('zzzzzzzzzzzzzzz');
+    var students = this.props.students[0];
+    if((students ==null || students==undefined)){
+      console.log('No students')
+    }else{
+      console.log(students);
 
-      {rollno:1, name:'A', subject:'English'},
-            {rollno:2, name:'B', subject:'Hindi'},
-            {rollno:3, name:'C', subject:'Russian'}
-    ];
+    }
+    // [
+    //   {rollno:1, name:'A', subject:'English'},
+    //         {rollno:2, name:'B', subject:'Hindi'},
+    //         {rollno:3, name:'C', subject:'Russian'}
+    // ];
 
-    if(students.length == 0){
+    if((students ==null || students==undefined)){
           return (
             <div className = "data-table">
-              <p>Data table</p>
               <table className="hover stack">
                 <thead className="data-table-header">
                   <tr>
